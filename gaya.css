@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light dark;
+  --latar: #f6f5f1;
+  --kartu: #ffffff;
+  --teks: #24262b;
+  --teks-lembut: #5c6068;
+  --garis: #dcdad3;
+  --aksen: #8a5a00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --latar: #17181b;
+    --kartu: #212327;
+    --teks: #eceae4;
+    --teks-lembut: #a9acb3;
+    --garis: #383a40;
+    --aksen: #e6b04a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-inline: 16px;
+  background: var(--latar);
+  color: var(--teks);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.isi {
+  max-width: 44rem;
+  margin-inline: auto;
+  padding-block: 2.5rem 3rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--garis);
+}
+
+nav .nama {
+  margin-right: auto;
+  font-weight: 700;
+}
+
+a {
+  color: var(--aksen);
+  overflow-wrap: anywhere;
+}
+
+nav .nama a {
+  color: var(--teks);
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.pengantar {
+  margin: 0 0 1.5rem;
+  color: var(--teks-lembut);
+  font-size: 1.1rem;
+}
+
+.tanggal {
+  margin: 0 0 1.5rem;
+  color: var(--teks-lembut);
+  font-size: 0.9rem;
+}
+
+.catatan {
+  margin-block: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-block: 0.35rem;
+}
+
+code {
+  overflow-wrap: anywhere;
+  font-size: 0.9em;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--garis);
+  color: var(--teks-lembut);
+  font-size: 0.9rem;
+}
