@@ -28,7 +28,7 @@
       <p>Aplikasi meminta empat izin:</p>
       <ul>
         <li><code>youtube.readonly</code>: nama dan ID channel, jumlah total views, subscriber, dan video, serta judul video.</li>
-        <li><code>yt-analytics.readonly</code>: statistik harian channel dan statistik per video, seperti views, watch time, rata-rata durasi tonton, likes, jumlah komentar, jumlah share, dan perubahan subscriber. Juga ringkasan asal penonton, negara, jenis konten, serta persentase usia dan gender penonton yang login. Ringkasan ini berasal dari YouTube dan tidak memuat data per orang.</li>
+        <li><code>yt-analytics.readonly</code>: statistik harian channel dan statistik per video, seperti views, watch time, rata-rata durasi tonton, likes, jumlah komentar, jumlah share, dan perubahan subscriber. Juga impressions dan CTR thumbnail per video, serta ringkasan asal penonton, negara, jenis konten, dan persentase usia dan gender penonton yang login. Ringkasan ini berasal dari YouTube dan tidak memuat data per orang.</li>
         <li><code>yt-analytics-monetary.readonly</code>: estimasi pendapatan channel dan video.</li>
         <li><code>youtube.force-ssl</code>: untuk membaca komentar di video channel dan mengirim balasan atas nama channel. Data komentar yang dibaca adalah isi komentar, nama tampilan dan ID channel penulisnya, waktu, video tempat komentar ditulis, dan siapa yang sudah membalas.</li>
       </ul>
@@ -65,6 +65,7 @@
         <li>Catatan statistik publik per menit: dihapus setelah 7 hari.</li>
         <li>Judul dan statistik video yang tidak diperbarui: dihapus setelah 30 hari.</li>
         <li>Ringkasan asal penonton, negara, jenis konten, usia, dan gender yang tidak diperbarui: dihapus setelah 30 hari.</li>
+        <li>Impressions dan CTR thumbnail per video per hari: dihapus setelah 180 hari.</li>
         <li>Komentar, nama penulis, dan judul video di daftar komentar yang tidak diperbarui: dihapus setelah 30 hari.</li>
         <li>Teks balasan yang dikirim lewat aplikasi dan ID komentarnya: dihapus setelah 30 hari. Waktu dan jumlah balasan tetap disimpan.</li>
         <li>ID komentar di catatan kerja Moderator: dihapus setelah 30 hari. Waktu dan jumlah pekerjaan tetap disimpan.</li>
