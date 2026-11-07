@@ -17,34 +17,46 @@
 
     <main>
       <h1>Kebijakan Privasi</h1>
-      <p class="tanggal">Berlaku sejak 6 November 2026</p>
-      <p>Kebijakan ini menjelaskan cara aplikasi desktop Lumbuang Ameh memakai data channel YouTube. Aplikasi ini dipakai secara internal oleh pengelola channel (Administrator) atas izin pemilik channel.</p>
+      <p class="tanggal">Diperbarui 7 November 2026</p>
+      <p>Kebijakan ini menjelaskan cara aplikasi desktop Lumbuang Ameh memakai data channel YouTube. Aplikasi ini dipakai secara internal oleh pengelola channel atas izin pemilik channel: Administrator, dan Moderator yang ditunjuk Administrator untuk membalas komentar.</p>
+      <p>Versi ini menambahkan pembacaan dan balasan komentar, akses Moderator, dan catatan kerja Moderator. Pemilik channel diminta menyetujuinya sebelum izin baru dipakai.</p>
 
       <h2>Layanan API YouTube</h2>
       <p>Lumbuang Ameh menggunakan <strong>layanan API YouTube</strong>. Dengan memberi izin, pemilik channel juga tunduk pada <a href="https://www.youtube.com/t/terms">Ketentuan Layanan YouTube</a>. Data yang diproses Google mengikuti <a href="https://www.google.com/policies/privacy">Kebijakan Privasi Google</a>.</p>
 
       <h2>Data yang diakses</h2>
-      <p>Aplikasi meminta tiga izin baca:</p>
+      <p>Aplikasi meminta empat izin:</p>
       <ul>
         <li><code>youtube.readonly</code>: nama dan ID channel, jumlah total views, subscriber, dan video, serta judul video.</li>
         <li><code>yt-analytics.readonly</code>: statistik harian channel dan statistik per video, seperti views, watch time, rata-rata durasi tonton, likes, jumlah komentar, jumlah share, dan perubahan subscriber. Juga ringkasan asal penonton, negara, jenis konten, serta persentase usia dan gender penonton yang login. Ringkasan ini berasal dari YouTube dan tidak memuat data per orang.</li>
         <li><code>yt-analytics-monetary.readonly</code>: estimasi pendapatan channel dan video.</li>
+        <li><code>youtube.force-ssl</code>: untuk membaca komentar di video channel dan mengirim balasan atas nama channel. Data komentar yang dibaca adalah isi komentar, nama tampilan dan ID channel penulisnya, waktu, video tempat komentar ditulis, dan siapa yang sudah membalas.</li>
       </ul>
-      <p>Aplikasi tidak meminta atau menyimpan password Google, dan pada izin saat ini tidak bisa mengubah apa pun di channel. Aplikasi juga tidak menyimpan isi komentar.</p>
+      <p>Menurut Google, izin <code>youtube.force-ssl</code> mencakup melihat, mengubah, dan menghapus video, rating, komentar, dan teks (caption). Google tidak menyediakan izin yang lebih sempit untuk membalas komentar. Aplikasi hanya memakainya untuk membaca komentar dan mengirim balasan; aplikasi tidak mengubah atau menghapus video, rating, komentar, maupun teks.</p>
+      <p>Aplikasi tidak meminta atau menyimpan password Google.</p>
 
       <h2>Cara data dipakai</h2>
-      <p>Data hanya dipakai untuk menampilkan statistik dan estimasi pendapatan channel tersebut kepada pengelolanya. Data tidak digabungkan antarchannel.</p>
+      <p>Data hanya dipakai untuk menampilkan statistik dan estimasi pendapatan channel tersebut kepada pengelolanya, serta untuk membaca dan membalas komentar channel itu. Data tidak digabungkan antarchannel.</p>
+      <p>Setiap balasan ditulis oleh pengelola dan baru dikirim setelah pengelola menekan Kirim lalu menyetujui balasan publik atas nama channel. Aplikasi tidak membalas secara otomatis dan tidak memakai AI untuk menulis balasan.</p>
       <p>Data tidak dijual, tidak dipakai untuk iklan, tidak dipakai untuk menilai kelayakan kredit, dan tidak dipakai untuk melatih model AI.</p>
 
       <h2>Siapa yang bisa melihat data</h2>
-      <p>Data hanya bisa dilihat oleh orang yang memakai PC tempat aplikasi berjalan dan channel itu terhubung, yaitu Administrator yang ditunjuk pemilik channel. Data tidak dikirim ke server milik aplikasi, karena aplikasi tidak memilikinya. Aplikasi hanya berkomunikasi dengan layanan Google untuk login dan mengambil data.</p>
-      <p>Administrator dapat menyampaikan statistik channel kepada pemilik channel tersebut.</p>
+      <p>Data hanya bisa dilihat di PC tempat aplikasi berjalan dan channel itu terhubung:</p>
+      <ul>
+        <li><strong>Administrator</strong> yang ditunjuk pemilik channel melihat statistik, estimasi pendapatan, dan komentar, serta dapat membalas komentar.</li>
+        <li><strong>Moderator</strong>, bila diberi akses oleh Administrator, memakai aplikasi yang sama di PC-nya sendiri untuk melihat statistik, estimasi pendapatan, dan komentar, serta membalas komentar. Moderator tidak dapat menghubungkan atau memutus channel.</li>
+      </ul>
+      <p>Data tidak dikirim ke server milik aplikasi, karena aplikasi tidak memilikinya. Aplikasi berkomunikasi dengan layanan Google untuk login, mengambil data, dan mengirim balasan. Administrator dapat menyampaikan statistik channel kepada pemilik channel tersebut.</p>
+
+      <h2>Catatan kerja Moderator</h2>
+      <p>Bila akses Moderator dipakai, aplikasi Moderator mencatat waktu masuk dan keluar, channel, jenis pekerjaan, dan ID komentar yang dibalas, <strong>tanpa isi komentar dan tanpa token</strong>. Catatan ini disimpan di folder Google Drive milik Administrator yang dibagikan kepada Moderator, agar Administrator dapat melihat laporan kerja. Isi folder itu mengikuti pengaturan dan kebijakan Google Drive.</p>
+      <p>Pemilik channel hanya akan melihat jumlah balasan dan waktu terakhir aktif di channel-nya. Angka ini dihitung aplikasi, bukan dari YouTube.</p>
 
       <h2>Penyimpanan di perangkat</h2>
       <p>Aplikasi menyimpan data di perangkat tempatnya berjalan, dan tidak memakai cookie atau iklan pihak ketiga.</p>
       <ul>
-        <li><strong>Token izin Google</strong> disimpan di penyimpanan aman Windows pada PC tersebut, tidak di database aplikasi.</li>
-        <li><strong>Statistik</strong> disimpan di file database lokal pada PC tersebut. File ini tidak dienkripsi tersendiri, sehingga perlindungannya mengikuti keamanan PC dan akun Windows.</li>
+        <li><strong>Token izin Google</strong> disimpan di penyimpanan aman Windows pada PC tersebut, tidak di database aplikasi. Untuk PC Moderator, token dikirim satu kali dalam file yang dikunci kata sandi; kata sandinya dikirim lewat jalur lain, dan file dihapus setelah dibuka.</li>
+        <li><strong>Statistik, komentar, dan riwayat balasan</strong> disimpan di file database lokal pada PC tersebut. File ini tidak dienkripsi tersendiri, sehingga perlindungannya mengikuti keamanan PC dan akun Windows.</li>
         <li><strong>Koneksi ke Google</strong> memakai HTTPS. Aplikasi juga dilindungi login lokal, dan password login itu disimpan dalam bentuk hash.</li>
       </ul>
 
@@ -53,21 +65,24 @@
         <li>Catatan statistik publik per menit: dihapus setelah 7 hari.</li>
         <li>Judul dan statistik video yang tidak diperbarui: dihapus setelah 30 hari.</li>
         <li>Ringkasan asal penonton, negara, jenis konten, usia, dan gender yang tidak diperbarui: dihapus setelah 30 hari.</li>
+        <li>Komentar, nama penulis, dan judul video di daftar komentar yang tidak diperbarui: dihapus setelah 30 hari.</li>
+        <li>Teks balasan yang dikirim lewat aplikasi dan ID komentarnya: dihapus setelah 30 hari. Waktu dan jumlah balasan tetap disimpan.</li>
+        <li>ID komentar di catatan kerja Moderator: dihapus setelah 30 hari. Waktu dan jumlah pekerjaan tetap disimpan.</li>
         <li>Statistik harian dan estimasi pendapatan: disimpan selama channel terhubung agar perbandingan periode bisa dilakukan.</li>
         <li>Token izin: disimpan selama channel terhubung.</li>
       </ul>
 
       <h2>Mencabut izin dan menghapus data</h2>
-      <p>Pemilik channel dapat mencabut izin kapan saja lewat <a href="https://security.google.com/settings/security/permissions">halaman izin akun Google</a>.</p>
+      <p>Pemilik channel dapat mencabut izin kapan saja lewat <a href="https://security.google.com/settings/security/permissions">halaman izin akun Google</a>. Pencabutan menghentikan akses aplikasi di semua PC, termasuk PC Moderator.</p>
       <ul>
-        <li><strong>Lewat aplikasi:</strong> tombol putuskan channel mencabut izin di Google dan menghapus data channel itu dari PC.</li>
+        <li><strong>Lewat aplikasi:</strong> tombol putuskan channel di PC Administrator mencabut izin di Google dan menghapus data channel itu dari PC tersebut. Data channel itu di PC Moderator dihapus paling lambat 7 hari kemudian.</li>
         <li><strong>Lewat akun Google:</strong> data channel dihapus dari PC paling lambat 30 hari setelah izin dicabut.</li>
         <li><strong>Atas permintaan:</strong> pemilik channel dapat meminta penghapusan data, dan permintaan diproses paling lambat 7 hari.</li>
       </ul>
-      <p>Menghapus data dari aplikasi tidak memengaruhi data apa pun di YouTube.</p>
+      <p>Menghapus data dari aplikasi tidak memengaruhi data apa pun di YouTube. Balasan yang sudah dikirim tetap ada di YouTube dan dapat dihapus pemilik channel lewat YouTube Studio.</p>
 
       <h2>Perubahan kebijakan</h2>
-      <p>Bila aplikasi nanti memakai data dengan cara baru, misalnya membalas komentar atau memberi akses kepada pengelola lain, kebijakan ini diperbarui lebih dulu dan pemilik channel diminta menyetujuinya kembali.</p>
+      <p>Bila cara aplikasi memakai data berubah lagi, kebijakan ini diperbarui lebih dulu dan pemilik channel diminta menyetujuinya kembali.</p>
 
       <h2>Kontak</h2>
       <p>Pemilik channel dapat menghubungi Administrator yang mengelola channelnya secara langsung. Pertanyaan atau keluhan privasi lainnya dapat disampaikan lewat <a href="https://github.com/crezzvfx/crezzvfx.github.io/issues">halaman Issues proyek ini</a>. Halaman itu terbuka untuk umum, jadi jangan menuliskan data pribadi di sana.</p>
