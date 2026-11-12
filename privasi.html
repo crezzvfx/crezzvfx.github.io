@@ -17,7 +17,7 @@
 
     <main>
       <h1>Kebijakan Privasi</h1>
-      <p class="tanggal">Diperbarui 7 November 2026</p>
+      <p class="tanggal">Diperbarui 12 November 2026</p>
       <p>Kebijakan ini menjelaskan cara aplikasi desktop Lumbuang Ameh memakai data channel YouTube. Aplikasi ini dipakai secara internal oleh pengelola channel atas izin pemilik channel: Administrator, dan Moderator yang ditunjuk Administrator untuk membalas komentar.</p>
       <p>Versi ini menambahkan pembacaan dan balasan komentar, akses Moderator, dan catatan kerja Moderator. Pemilik channel diminta menyetujuinya sebelum izin baru dipakai.</p>
 
@@ -69,17 +69,21 @@
         <li>Komentar, nama penulis, dan judul video di daftar komentar yang tidak diperbarui: dihapus setelah 30 hari.</li>
         <li>Teks balasan yang dikirim lewat aplikasi dan ID komentarnya: dihapus setelah 30 hari. Waktu dan jumlah balasan tetap disimpan.</li>
         <li>ID komentar di catatan kerja Moderator: dihapus setelah 30 hari. Waktu dan jumlah pekerjaan tetap disimpan.</li>
-        <li>Statistik harian dan estimasi pendapatan: disimpan selama channel terhubung agar perbandingan periode bisa dilakukan.</li>
+        <li>Statistik harian dan estimasi pendapatan: disimpan selama izin channel terbukti berlaku. Aplikasi memeriksa izin saat dibuka dan tiap 6 jam selama terbuka. Bila izin tidak bisa dipastikan lebih dari 30 hari, data disembunyikan dan tidak dipakai sampai pemeriksaan berhasil.</li>
+        <li>Nama channel: diperbarui setiap izin diperiksa; dikosongkan bila izin tidak bisa dipastikan lebih dari 30 hari.</li>
+        <li>Catatan klaim yang ditulis Administrator: bukan data dari YouTube; tetap disimpan walau channel diputuskan, dan tampil lagi bila channel yang sama dihubungkan ulang.</li>
         <li>Token izin: disimpan selama channel terhubung.</li>
       </ul>
 
       <h2>Mencabut izin dan menghapus data</h2>
       <p>Pemilik channel dapat mencabut izin kapan saja lewat <a href="https://security.google.com/settings/security/permissions">halaman izin akun Google</a>. Pencabutan menghentikan akses aplikasi di semua PC, termasuk PC Moderator.</p>
       <ul>
-        <li><strong>Lewat aplikasi:</strong> tombol putuskan channel di PC Administrator mencabut izin di Google dan menghapus data channel itu dari PC tersebut. Data channel itu di PC Moderator dihapus paling lambat 7 hari kemudian.</li>
-        <li><strong>Lewat akun Google:</strong> data channel dihapus dari PC paling lambat 30 hari setelah izin dicabut.</li>
+        <li><strong>Lewat aplikasi:</strong> tombol putuskan channel di PC Administrator mencabut izin di Google dan langsung menghapus data YouTube channel itu dari PC tersebut. Catatan klaim, jumlah dan waktu balasan, serta catatan kuota tetap disimpan. Di PC Moderator, data channel itu dihapus saat aplikasi di PC tersebut dibuka dan mendapati izin sudah tidak berlaku.</li>
+        <li><strong>Lewat akun Google:</strong> bila Google menyatakan izin tidak berlaku, statistik langsung disembunyikan, lalu dihapus pada pemeriksaan pertama yang masih ditolak Google sesudah 30 hari sejak izin terakhir terbukti berlaku.</li>
+        <li><strong>Bila izin tidak bisa dipastikan</strong> (misalnya tanpa internet): data tidak dihapus, tetapi disembunyikan dan tidak dipakai sampai ada jawaban pasti dari Google.</li>
         <li><strong>Atas permintaan:</strong> pemilik channel dapat meminta penghapusan data, dan permintaan diproses paling lambat 7 hari.</li>
       </ul>
+      <p>Aplikasi tidak memakai server, jadi pemeriksaan dan penghapusan hanya berjalan saat aplikasi terbuka. PC yang lama tidak dinyalakan menjalankannya saat aplikasi dibuka berikutnya.</p>
       <p>Menghapus data dari aplikasi tidak memengaruhi data apa pun di YouTube. Balasan yang sudah dikirim tetap ada di YouTube dan dapat dihapus pemilik channel lewat YouTube Studio.</p>
 
       <h2>Perubahan kebijakan</h2>
