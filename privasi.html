@@ -28,7 +28,7 @@
       <p>Aplikasi meminta empat izin:</p>
       <ul>
         <li><code>youtube.readonly</code>: nama dan ID channel, jumlah total views, subscriber, dan video, serta judul dan tanggal terbit video.</li>
-        <li><code>yt-analytics.readonly</code>: statistik harian channel dan statistik per video, seperti views, watch time, rata-rata durasi tonton, likes, jumlah komentar, jumlah share, dan perubahan subscriber. Juga impressions dan CTR thumbnail per video, serta ringkasan asal penonton, negara, jenis konten, dan persentase usia dan gender penonton yang login. Ringkasan ini berasal dari YouTube dan tidak memuat data per orang.</li>
+        <li><code>yt-analytics.readonly</code>: statistik harian channel dan statistik per video, seperti views, watch time, rata-rata durasi tonton, likes, jumlah komentar, jumlah share, dan perubahan subscriber. Juga impressions dan CTR thumbnail per video, serta ringkasan asal penonton (untuk periode terakhir dan periode sebelumnya, supaya perubahannya bisa dibandingkan, juga untuk beberapa video yang tampil di Ringkasan), negara, jenis konten, dan persentase usia dan gender penonton yang login. Ringkasan ini berasal dari YouTube dan tidak memuat data per orang.</li>
         <li><code>yt-analytics-monetary.readonly</code>: estimasi pendapatan channel dan video.</li>
         <li><code>youtube.force-ssl</code>: untuk membaca komentar di video channel dan mengirim balasan atas nama channel. Data komentar yang dibaca adalah isi komentar, nama tampilan dan ID channel penulisnya, waktu, video tempat komentar ditulis, dan siapa yang sudah membalas.</li>
       </ul>
@@ -39,6 +39,7 @@
       <p>Data hanya dipakai untuk menampilkan statistik dan estimasi pendapatan channel tersebut kepada pengelolanya, serta untuk membaca dan membalas komentar channel itu. Data tidak digabungkan antarchannel.</p>
       <p>Setiap balasan ditulis oleh pengelola dan baru dikirim setelah pengelola menekan Kirim lalu menyetujui balasan publik atas nama channel. Aplikasi tidak membalas secara otomatis dan tidak memakai AI untuk menulis balasan.</p>
       <p>Data tidak dijual, tidak dipakai untuk iklan, tidak dipakai untuk menilai kelayakan kredit, dan tidak dipakai untuk melatih model AI.</p>
+      <p>Halaman Ringkasan di aplikasi menghitung perbandingan dari data yang tersimpan: total, selisih, persen perubahan, porsi sumber penonton, dan video dengan perubahan terbesar. Angka hasil hitungan diberi keterangan bahwa dihitung aplikasi dari data YouTube, bukan data dari YouTube. Ringkasan juga menulis kalimat fakta dan, untuk pola tertentu, kalimat berlabel &ldquo;dugaan, belum terbukti&rdquo; yang menyebut hal yang layak diperiksa. Aplikasi tidak membuat skor atau penilaian gabungan tentang channel dan tidak membandingkan antarchannel. Hasil hitungan hanya tampil di aplikasi Administrator dan Moderator.</p>
 
       <h2>Siapa yang bisa melihat data</h2>
       <p>Data hanya bisa dilihat di PC tempat aplikasi berjalan dan channel itu terhubung:</p>
@@ -64,7 +65,7 @@
       <ul>
         <li>Catatan statistik publik per menit: dihapus setelah 7 hari.</li>
         <li>Judul dan statistik video yang tidak diperbarui: dihapus setelah 30 hari.</li>
-        <li>Ringkasan asal penonton, negara, jenis konten, usia, dan gender yang tidak diperbarui: dihapus setelah 30 hari.</li>
+        <li>Ringkasan asal penonton (termasuk periode sebelumnya dan per video), negara, jenis konten, usia, dan gender yang tidak diperbarui: dihapus setelah 30 hari.</li>
         <li>Impressions dan CTR thumbnail per video per hari: dihapus setelah 180 hari.</li>
         <li>Komentar, nama penulis, dan judul video di daftar komentar yang tidak diperbarui: dihapus setelah 30 hari.</li>
         <li>Teks balasan yang dikirim lewat aplikasi dan ID komentarnya: dihapus setelah 30 hari. Waktu dan jumlah balasan tetap disimpan.</li>
@@ -72,6 +73,7 @@
         <li>Statistik harian dan estimasi pendapatan: disimpan selama izin channel terbukti berlaku. Aplikasi memeriksa izin saat dibuka dan tiap 6 jam selama terbuka. Bila izin tidak bisa dipastikan lebih dari 30 hari, data disembunyikan dan tidak dipakai sampai pemeriksaan berhasil.</li>
         <li>Nama channel: diperbarui setiap izin diperiksa; dikosongkan bila izin tidak bisa dipastikan lebih dari 30 hari.</li>
         <li>Catatan klaim yang ditulis Administrator: bukan data dari YouTube; tetap disimpan walau channel diputuskan, dan tampil lagi bila channel yang sama dihubungkan ulang.</li>
+        <li>Notifikasi di bilah judul aplikasi (jenis kabar, teks ringkas berisi angka dan nama channel, serta waktu; tanpa isi komentar): paling banyak 50 item, dihapus setelah 30 hari atau saat channel diputuskan.</li>
         <li>Token izin: disimpan selama channel terhubung.</li>
       </ul>
 
